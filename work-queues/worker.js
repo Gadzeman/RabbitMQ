@@ -16,6 +16,8 @@ amqp.connect('amqp://10.0.0.224:5672', (error, connection) => {
             durable: true
         })
 
+        channel.prefetch(1)
+
         channel.consume(queue, (message) => {
             console.log(" [x] Received %s", message.content.toString());
 
