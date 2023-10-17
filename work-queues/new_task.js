@@ -19,7 +19,7 @@ amqp.connect('amqp://10.0.0.224:5672', (error, connection) => {
         })
 
         channel.sendToQueue(queue, Buffer.from(message), {
-            persistent: true
+            persistent: true // means to save the message in dist as soon as it reach the queue
         })
 
         console.log(" [x] Sent %s", message);
