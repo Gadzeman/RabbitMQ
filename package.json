@@ -1,5 +1,5 @@
 {
-  "name": "routing",
+  "name": "rabbitmq",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
